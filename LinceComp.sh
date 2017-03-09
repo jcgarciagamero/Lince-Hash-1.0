@@ -5,13 +5,13 @@
 #Date: 2017-01-14
 
 directorio=$(pwd)
-ruta=$(zenity --file-selection --title="Seleccione su fichero Checksum")
+ruta=$(zenity --width=480 --height=320 --file-selection --title="Seleccione su fichero Checksum")
 var1=$(echo $?)
 
 if [ $var1 = 1 ]; then
 "$directorio/LinceHash.sh"
 
-	else hash=$(zenity --entry --entry-text="sha1 sha256 sha512" --text="Elija el tipo de hash a comparar")
+	else hash=$(zenity --width=480 --height=320 --entry --entry-text="sha1 sha256 sha512" --text="Elija el tipo de hash a comparar")
 	var3=$(echo $?)
 		if [ $var3 = 1 ]; then
  			"$directorio/LinceHash.sh"
@@ -20,13 +20,13 @@ if [ $var1 = 1 ]; then
 				
 				if [ $var7 = 1 ]; then
 					"$directorio/LinceHash.sh"
-					else zenity --warning --text="Asegúrese que tanto la imagen como el Checksum están en el mismo directorio"
+					else zenity --width=480 --height=320 --warning --text="Asegúrese que tanto la imagen como el Checksum están en el mismo directorio"
 					mensaje=$(zenity --entry --entry-text="Péguelo aquí" --text="Pegue el hash copiado anteriormente")
 					var6=$(echo $?)
 
 						if [ $var6 = 1 ]; then
  							"$directorio/LinceHash.sh"
-							else zenity --info --text="El proceso puede tardar unos minutos, le avisaremos cuando haya terminado"
+							else zenity --width=480 --height=320 --info --text="El proceso puede tardar unos minutos, le avisaremos cuando haya terminado"
 							ruta3=$(zenity --file-selection --title="Seleccione la imagen a comparar")
 							var5=$(echo $?)
 		
