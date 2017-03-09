@@ -22,13 +22,13 @@ if [ $var1 = 1 ]; then
 			"$directorio/LinceHash.sh"
 
 			elif [ $file = "Sha1" ]; then
-	 		sudo sha1sum $ruta > "$ruta2/NuevoHash.txt"
+	 		sudo sha1sum "$ruta" > "$ruta2/NuevoHash.txt"
 
 			elif [ $file = "Sha256" ]; 
-			then sudo sha256sum $ruta > "$ruta2/NuevoHash.txt"
+			then sudo sha256sum "$ruta" > "$ruta2/NuevoHash.txt"
 
 			elif [ $file = "Sha512" ]; then
-			sudo sha512sum $ruta > "$ruta2/NuevoHash.txt"
+			sudo sha512sum "$ruta" > "$ruta2/NuevoHash.txt"
 			fi
 		cd "$directorio"
 		zenity --title="Este es el hash realizado a tu imagen" --text-info --filename="$ruta2/NuevoHash.txt"
