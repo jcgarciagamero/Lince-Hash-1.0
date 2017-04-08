@@ -3,6 +3,7 @@
 #Lince HASH 1.0
 #Author: José C. García Gamero.
 #Date: 2017-01-14
+#E-Mail: josecarlos@ims4c.com
 
 directorio=$(pwd)
 ruta=$(zenity --width=480 --height=320 --file-selection --title="Seleccione su fichero Checksum")
